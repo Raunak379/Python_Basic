@@ -33,3 +33,11 @@ for i in range(1,number+1):
 num = int(input("enter the number : "))
 for i in range(1,11):
     print(num,"x",i,"=",num*i)
+
+#pattern Question
+row = 5
+for i in range(1,row+1):
+    for j in range(i):
+        print("*",end="")
+    print()
+
