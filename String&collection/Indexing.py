@@ -31,7 +31,7 @@ print(numbers)
 word = "python"
 smallest = "p"
 for i in range(1,6):
-    if smallest>word[i]:
+    if smallest>word[i]:                #################################################
         smallest = word[i]
 print(smallest)
 
