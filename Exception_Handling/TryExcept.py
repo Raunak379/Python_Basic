@@ -1,4 +1,4 @@
-"""#Handle ZeroDivisionError.
+#Handle ZeroDivisionError.
 try:
     num1 = 10
     num2 = 0
@@ -34,6 +34,5 @@ num2 = "20"
 try:
     print(num1+num2)
 except TypeError:
-    print("Type error")"""
+    print("Type error")
 
-#Use else with try-except.
