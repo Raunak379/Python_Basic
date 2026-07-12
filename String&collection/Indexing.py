@@ -23,7 +23,7 @@ print(fruits[1])
 
 #Replace the first element.
 numbers = [10, 20, 30]
-numbers(0)=100
+numbers[0]=100
 print(numbers)
 
 

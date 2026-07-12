@@ -41,3 +41,9 @@ for i in range(1,row+1):
         print("*",end="")
     print()
 
+#square of number in pattern
+num = 4
+for i in range(1,num+1):
+    for j in range(1,num+1):
+        print(j,end="")
+    print()
