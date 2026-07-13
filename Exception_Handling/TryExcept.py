@@ -36,3 +36,57 @@ try:
 except TypeError:
     print("Type error")
 
+#Use else with try-except.
+try:
+    num = int(input("Enter a number: "))
+    result = 100 / num
+except ValueError:
+    print("Please enter a valid number")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+else:
+    print("Result =", result)
+
+#Use finally to print "Program End".
+try:
+    num = int(input("Enter a number: "))
+    result = 100 / num
+except ValueError:
+    print("Please enter a valid number")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+else:
+    print("Result =", result)
+finally:
+    print("Program End")
+
+#Handle multiple exceptions in one program.
+try:
+    num = int(input("Enter number: "))
+    result = 10 / num
+except ValueError:
+    print("Invalid input")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+else:
+    print("result = ",result)
+
+#Raise a custom exception if age is less than 18
+class InvalidAgeError(Exception):
+    pass
+age = int(input("Enter your age: "))
+if age < 18:
+    raise InvalidAgeError("Age must be 18 or above.")
+else:
+    print("You are eligible.")
+
+#Write a program that safely divides two user-entered numbers.
+try:
+    num1 = float(input("enter the first number = "))
+    num2 = float(input("enter the second number = "))
+    result = num1/num2
+    print(result)
+except ZeroDivisionError:
+    print("zero is not divisiual by any number")
+except ValueError:
+    print("invalid datatype value enter")
