@@ -1,4 +1,4 @@
-#Create a class BankAccount with a class attribute bank_name = "HDFC" and instance attributes holder_name and balance.
+"""#Create a class BankAccount with a class attribute bank_name = "HDFC" and instance attributes holder_name and balance.
 class BankAccount:
     bank_name = "HDFC"
     def __init__(self, holder_name, balance):
@@ -51,5 +51,16 @@ o2 = counter()
 o3 = counter()
 o4 = counter()
 o5 = counter()
-print(counter.count)
+print(counter.count)"""
 
+#Write a class Rectangle with __init__(self, length, width) and a method area(self) that returns length * width.
+#Create an object and call .area() two ways: obj.area() and Rectangle.area(obj). Confirm both give the same result.
+class rectangle:
+    def __init__(self,length,width):
+        self.length = length
+        self.width = width
+    def area(self):
+        return self.length * self.width
+    
+o1 = rectangle(5,5)
+print(o1.area())
