@@ -1,4 +1,4 @@
-"""#Create a class Employee with a private attribute __salary. Add a method raise_salary(percent) that increases salary only if percent > 0,
+#Create a class Employee with a private attribute __salary. Add a method raise_salary(percent) that increases salary only if percent > 0,
 #and a get_salary() method to view it.
 class Employee:
     def __init__(self, salary):
@@ -23,7 +23,7 @@ class Employee:
     def __init__(self, salary):
         self.__salary = salary
 emp = Employee(50000)
-print(emp._Employee__salary)"""
+print(emp._Employee__salary)
 
 #Create a class Temperature with a private __celsius. Add set_temp(value) that only accepts values above -273.15 (absolute zero),
 #otherwise print "Invalid temperature". Add get_temp() to read it.
