@@ -1,4 +1,4 @@
-"""#Create a parent class Shape with a method area() that returns 0. 
+#Create a parent class Shape with a method area() that returns 0. 
 #Create child classes Circle, Rectangle, and Triangle, each overriding area() with its own correct formula (accept dimensions via __init__).
 class Shape:
     def Area(self):
@@ -55,7 +55,7 @@ o2 =rectangle(5,5)
 o3 = triangle(4,4)
 shapes = [o1,o2,o3]
 for Shape in shapes:
-    print(Shape.Area())"""
+    print(Shape.Area())
 
 #Using duck typing (no shared parent class at all), create two unrelated classes Printer and FaxMachine, both with a method start().
 #Write one function operate(device) that calls device.start() and works on both.
