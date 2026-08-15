@@ -6,23 +6,35 @@ class Node:
 
 
 def insert(root, value):
-    # If tree/subtree is empty
     if root is None:
         return Node(value)
 
-    # If value already exists
     if root.data == value:
         return root
 
-    # Insert in left subtree
-    if root.data > value:
+    if value < root.data:
         root.left = insert(root.left, value)
 
-    # Insert in right subtree
     else:
         root.right = insert(root.right, value)
 
     return root
+
+
+def Search(root, value):
+    if root is None:
+        print("Element not Found")
+        return
+
+    if root.data == value:
+        print("Element Found")
+        return
+
+    if value < root.data:
+        Search(root.left, value)
+
+    else:
+        Search(root.right, value)
 
 
 def Inorder(root):
@@ -30,7 +42,6 @@ def Inorder(root):
         Inorder(root.left)
         print(root.data, end=" ")
         Inorder(root.right)
-
 
 root = insert(None, 20)
 root = insert(root, 15)
@@ -43,3 +54,4 @@ root = insert(root, 50)
 
 Inorder(root)
 
+Search(root, 15)
