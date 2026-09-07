@@ -1,4 +1,4 @@
- #insertAtEnd
+""" #insertAtEnd
 class Node:
     def __init__(self, info, next=None):
         self.info = info
@@ -11,15 +11,15 @@ class SinglyLinkedList:
         if self.head is None:
             self.head = temp
         else:
-            t1 = self.head
-            while t1.next is not None:
-                t1 = t1.next
-            t1.next = temp
+            tHead = self.head
+            while tHead.next is not None:
+                tHead = tHead.next
+            tHead.next = temp
     def printerLL(self):
-        t1 = self.head
-        while t1 is not None:
-            print(t1.info)
-            t1 = t1.next
+        tHead = self.head
+        while tHead is not None:
+            print(tHead.info)
+            tHead = tHead.next
 obj = SinglyLinkedList()
 obj.insertAtEnd(10)
 obj.insertAtEnd(20)
@@ -39,20 +39,20 @@ class SinglyLinkedList:
         if self.head is None:
             self.head = temp
         else:
-            t1 = self.head
-            while t1.next is not None:
-                t1 = t1.next
-            t1.next = temp
+            tHead = self.head
+            while tHead.next is not None:
+                tHead = tHead.next
+            tHead.next = temp
     def insertAtBeg(self,value):
         temp = Node(value)
         temp.next = self.head
         self.head = temp
 
     def printerLL(self):
-        t1 = self.head
-        while t1 is not None:
-            print(t1.info)
-            t1 = t1.next
+        tHead = self.head
+        while tHead is not None:
+            print(tHead.info)
+            tHead = tHead.next
 obj = SinglyLinkedList()
 obj.insertAtEnd(10)
 obj.insertAtEnd(20)
@@ -73,28 +73,28 @@ class SinglyLinkedList:
         if self.head is None:
             self.head = temp
         else:
-            t1 = self.head
-            while t1.next is not None:
-                t1 = t1.next
-            t1.next = temp
+            tHead = self.head
+            while tHead.next is not None:
+                tHead = tHead.next
+            tHead.next = temp
     def insertAtBeg(self, value):
         temp = Node(value)
         temp.next = self.head
         self.head = temp
-    def insertAtMid(self, value, x):
+    def insertAtMid(self, value, Loc):
         temp = Node(value)
-        t1 = self.head
-        while t1 is not None:
-            if t1.info == x:
-                temp.next = t1.next
-                t1.next = temp
+        tHead = self.head      #tHead is pointer that can move 
+        while tHead is not None:
+            if tHead.info == Loc:
+                temp.next = tHead.next
+                tHead.next = temp
                 break
-            t1 = t1.next
+            tHead = tHead.next
     def printerLL(self):
-        t1 = self.head
-        while t1 is not None:
-            print(t1.info)
-            t1 = t1.next
+        tHead = self.head
+        while tHead is not None:
+            print(tHead.info)
+            tHead = tHead.next
 obj = SinglyLinkedList()
 obj.insertAtEnd(10)
 obj.insertAtEnd(20)
@@ -116,23 +116,23 @@ class SinglyLinkedList:
         if self.head is None:
             self.head = temp
         else:
-            t1 = self.head
-            while t1.next is not None:
-                t1 = t1.next
-            t1.next = temp
+            tHead = self.head
+            while tHead.next is not None:
+                tHead = tHead.next
+            tHead.next = temp
     def insertAtBeg(self, value):
         temp = Node(value)
         temp.next = self.head
         self.head = temp
     def insertAtMid(self, value, x):
         temp = Node(value)
-        t1 = self.head
-        while t1 is not None:
-            if t1.info == x:
-                temp.next = t1.next
-                t1.next = temp
+        tHead = self.head
+        while tHead is not None:
+            if tHead.info == x:
+                temp.next = tHead.next
+                tHead.next = temp
                 return
-            t1 = t1.next
+            tHead = tHead.next
         print("Value", x, "not found.")
     def deleteLL(self, value):
         if self.head is None:
@@ -142,22 +142,22 @@ class SinglyLinkedList:
             self.head = self.head.next
             return
         prev = None
-        t1 = self.head
-        while t1 is not None:
-            if t1.info == value:
-                prev.next = t1.next
+        tHead = self.head
+        while tHead is not None:
+            if tHead.info == value:
+                prev.next = tHead.next
                 return
-            prev = t1
-            t1 = t1.next
+            prev = tHead
+            tHead = tHead.next
         print("Value", value, "not found.")
     def printerLL(self):
         if self.head is None:
             print("Linked List is Empty")
             return
-        t1 = self.head
-        while t1 is not None:
-            print(t1.info, end=" -> ")
-            t1 = t1.next
+        tHead = self.head
+        while tHead is not None:
+            print(tHead.info, end=" -> ")
+            tHead = tHead.next
         print("None")
 obj = SinglyLinkedList()
 obj.insertAtEnd(10)
@@ -182,16 +182,16 @@ class SingleLL:
         if self.head is None:
             self.head = temp
         else:
-            t1 = self.head
-            while t1.next is not None:
-                t1 = t1.next
-            t1.next = temp
+            tHead = self.head
+            while tHead.next is not None:
+                tHead = tHead.next
+            tHead.next = temp
     def printLL(self):
-        t1 = self.head
+        tHead = self.head
         result = []
-        while t1 is not None:
-            result.append(t1.info)
-            t1 = t1.next
+        while tHead is not None:
+            result.append(tHead.info)
+            tHead = tHead.next
         print(result)
 
 obj = SingleLL()
@@ -216,24 +216,24 @@ class SingleLL:
         if self.head is None:
             self.head = temp
         else:
-            t1 =self.head
-            while t1.next is not None:
-                t1 = t1.next
-            t1.next = temp
+            tHead =self.head
+            while tHead.next is not None:
+                tHead = tHead.next
+            tHead.next = temp
     def printLL(self):
-        t1 = self.head
+        tHead = self.head
         result = []
-        while t1.next is not None:
-            result.append(t1.info)
-            t1 = t1.next
+        while tHead.next is not None:
+            result.append(tHead.info)
+            tHead = tHead.next
         print(result)
     def length(self):
         count = 0              
-        t1 = self.head         
+        tHead = self.head         
 
-        while t1 is not None:  
+        while tHead is not None:  
             count += 1         
-            t1 = t1.next       
+            tHead = tHead.next       
 
         return count
 
@@ -244,4 +244,46 @@ obj.insertTheValue(3)
 obj.insertTheValue(4)
 obj.insertTheValue(5)
 obj.printLL()
-print(obj.length())
+print(obj.length())"""
+class Node:
+    def __init__(self, info, next = None):
+        self.info = info
+        self.next = next
+class SingleLL:
+    def __init__(self, head = None):
+        self.head = head
+    def InsertAtEnd(self,value):
+        temp = Node(value)
+        if self.head is None:
+            self.head = temp
+        else:
+            t1 = self.head
+            while t1.next is not None:
+                t1 = t1.next
+            t1.next = temp
+    def InsertAtBeg(self,value):
+        temp = Node(value)
+        temp.next = self.head
+        self.head = temp
+    def InsetAtMid(self,value,Loc):
+        temp = Node(value)
+        t1 =self.head
+        while t1 is not None:
+            if t1.info == Loc:
+                temp.next = t1.next
+                t1.next = temp
+                break
+            t1 = t1.next
+
+    def printLL(self):
+        t1 = self.head
+        while t1 is not None:
+            print(t1.info)
+            t1 = t1.next
+obj = SingleLL()
+obj.InsertAtEnd(10)
+obj.InsertAtEnd(20)
+obj.InsertAtEnd(30)
+obj.InsertAtBeg(5)
+obj.InsetAtMid(25,20)
+obj.printLL()
