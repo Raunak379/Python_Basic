@@ -1,3 +1,4 @@
+#graph in matrix representation 
 class Graph:
     def __init__(self,vertex):
         self.mat = [[0]*vertex for x in range(vertex)]
@@ -21,3 +22,20 @@ g.add_edge(2,4)
 g.add_edge(3,4)
 g.add_edge(2,3)
 g.print()
+
+#graph in list represtation
+
+class Graph:
+    def __init__(self):
+        self.adjList = {}
+
+    def add_vertex(self,vertex):
+        if vertex not in self.adjList:
+            self.adjList[vertex] = []
+    def addEdge(self,src,dest):
+        self.add_vertex(src)
+        self.add_vertex(dest)
+        self.adjList[src].append(dest)
+        self.adjList[dest].append(src)
+    
+    def printGraph 
