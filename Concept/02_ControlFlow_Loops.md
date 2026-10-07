@@ -22,7 +22,7 @@ Any value can be used as a condition. Falsy values: `0`, `0.0`, `""`, `[]`, `{}`
 ```python
 match day:
     case 1:
-        print("Monday")
+    2     print("Monday")
     case _:
         print("Invalid day")
 ```
